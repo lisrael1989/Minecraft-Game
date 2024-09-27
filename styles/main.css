@@ -6,10 +6,11 @@
 @import url(basics/base.css);
 /* @import url(basics/layout.css); */
 @import url(basics/helpers.css);
+@import url(basics/buttons.css);
 
 /* COMPONENTS */
-/* @import url(components/main-header.css);
-
+@import url(components/header.css);
+@import url(components/footer.css);
 
 /*Media queries*/
 /* @import url(setup/mq.css); */
