@@ -33,11 +33,6 @@ export function getTime(timeDiff) {
   return [(seconds + '').padStart(2, '0'), (milliseconds + '').padStart(3, '0')];
 }
 
-// const zelda = new Audio('../img/botw.mp3');
-// zelda.play();
-
-//link from buttons
-
 export function openHowToPlay() {
   document.getElementById('how-to-play-btn').addEventListener('click', function () {
     window.open('https://www.minecraft.net/en-us/minecraft-tips-for-beginners', '_blank');

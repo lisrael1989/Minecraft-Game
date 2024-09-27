@@ -5,6 +5,14 @@
   cursor: url('/assets/cursor.cur') 16 16, auto;
 }
 
+html {
+  font-family: minecraft-regular, sans-serif;
+  /* font-family: minecraft-bold, sans-serif; */
+  /* font-family: minecraft-bold-italic, sans-serif; */
+  /* font-family: minecraft-italic, sans-serif; */
+  height: 100vh;
+}
+
 body {
   background-color: var(--primary-color2);
   margin: 100px auto;
@@ -12,13 +20,6 @@ body {
   background-image: url('/assets/minecraft-landscape.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-html {
-  font-family: minecraft-regular, sans-serif;
-  /* font-family: minecraft-bold, sans-serif; */
-  /* font-family: minecraft-bold-italic, sans-serif; */
-  /* font-family: minecraft-italic, sans-serif; */
 }
 
 img {
