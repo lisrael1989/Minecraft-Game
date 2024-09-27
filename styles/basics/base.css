@@ -2,19 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: url('/assets/cursor.cur') 16 16, auto;
 }
 
 body {
-  background-color: #000;
+  background-color: var(--primary-color2);
+  margin: 100px auto;
+  text-align: center;
+  background-image: url('/assets/minecraft-landscape.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 html {
   font-family: minecraft-regular, sans-serif;
-  /* font-family: minecraft-bold, sans-serif;
-  font-family: minecraft-bold-italic, sans-serif;
-  font-family: minecraft-italic, sans-serif; */
+  /* font-family: minecraft-bold, sans-serif; */
+  /* font-family: minecraft-bold-italic, sans-serif; */
+  /* font-family: minecraft-italic, sans-serif; */
 }
 
 img {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
