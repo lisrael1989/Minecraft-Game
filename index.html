@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/Minecraft_Bedrock_icon.svg" type="image/svg" sizes="16x16" />
+
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="services/utils.js" defer></script>
-    <script src="services/app.js" defer></script>
+    <script src="services/utils.js" type="module" defer></script>
+    <script src="services/app.js" type="module" defer></script>
     <title>Minecraft Game</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- <h1 id="title">Minecraft</h1> -->
+      <img id="logo" src="/assets/minecraft-logo-current.webp" alt="minecraft-logo" />
+    </header>
+    <section class="btn-section">
+      <button id="start-game-btn">Start game</button>
+      <button id="how-to-play-btn">How to play</button>
+      <audio
+        id="button-sound"
+        src="https://minecraft.wiki/images/transcoded/Select_pattern2.ogg/Select_pattern2.ogg.mp3"
+      ></audio>
+    </section>
+    <footer>
+      <a href="https://github.com/lisrael1989/Minesweeper-Game" target="_blank"
+        ><p id="copyright">©️Made by Israel Litvak</p></a
+      >
+    </footer>
+  </body>
 </html>

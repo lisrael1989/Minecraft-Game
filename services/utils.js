@@ -1,4 +1,4 @@
-function getRandomColor() {
+export function getRandomColor() {
   const letters = '0123456789ABCDEF';
   var color = '#';
   for (var i = 0; i < 6; i++) {
@@ -7,7 +7,7 @@ function getRandomColor() {
   return color;
 }
 
-function getRandomInt(min, max) {
+export function getRandomInt(min, max) {
   if (Math.ceil(min) > Math.floor(max)) {
     console.log('Next time try a bigger range');
     return NaN;
@@ -15,7 +15,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min));
 }
 
-function startTimer() {
+export function startTimer() {
   if (gTimerInterval) clearInterval(gTimerInterval);
 
   gTimerInterval = setInterval(() => {
@@ -27,11 +27,27 @@ function startTimer() {
   }, 10);
 }
 
-function getTime(timeDiff) {
+export function getTime(timeDiff) {
   const seconds = Math.floor(timeDiff / 1000);
   const milliseconds = timeDiff % 1000;
   return [(seconds + '').padStart(2, '0'), (milliseconds + '').padStart(3, '0')];
 }
 
-const zelda = new Audio('../img/botw.mp3');
-zelda.play();
+// const zelda = new Audio('../img/botw.mp3');
+// zelda.play();
+
+//link from buttons
+
+export function openHowToPlay() {
+  document.getElementById('how-to-play-btn').addEventListener('click', function () {
+    window.open('https://www.minecraft.net/en-us/minecraft-tips-for-beginners', '_blank');
+  });
+}
+
+export function playSound() {
+  const sound = document.getElementById('button-sound');
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play();
+  }
+}
