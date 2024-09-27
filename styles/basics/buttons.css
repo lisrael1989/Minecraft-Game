@@ -1,0 +1,31 @@
+button {
+  font-family: 'Minecraft Ten';
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  text-shadow: hsla(0, 0%, 0%, 0.85) 0px 2px 0px;
+  padding: 0.5rem 5rem;
+  color: #fff;
+  background-color: #008943;
+  border: none;
+  border-top: var(--effect-border-size) solid #28d040;
+  border-inline: var(--effect-border-size) solid #0c6e3d;
+  border-bottom: var(--effect-border-size) solid #064d2a;
+  clip-path: var(--border-cutout-path);
+
+  &:hover {
+    background-color: #0a954e;
+    span {
+      display: inline-block;
+      transform: scale(1.0357);
+    }
+  }
+  &:active {
+    background-color: #008a44;
+    span {
+      transform: scale(1);
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}

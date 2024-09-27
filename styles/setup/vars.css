@@ -1,10 +1,31 @@
 /* Color Variables */
 :root {
   --primary-color: rgb(17, 17, 17);
+  --primary-color2: #f3f3f3;
+
   --header-main-color: #131921;
   --orange: orange;
   --white: #ffffff;
   --link-green: #007185;
   --orange-description: #df7921;
   --border-bottom: #bbbfbf;
+
+  --effect-border-size: 5px;
+  --cutout-pixel-size: 5px;
+  --outline-border-size: 3px;
+
+  --border-cutout-path: polygon(
+    0px var(--cutout-pixel-size),
+    var(--cutout-pixel-size) var(--cutout-pixel-size),
+    var(--cutout-pixel-size) 0px,
+    calc(100% - var(--cutout-pixel-size)) 0px,
+    calc(100% - var(--cutout-pixel-size)) var(--cutout-pixel-size),
+    100% var(--cutout-pixel-size),
+    100% calc(100% - var(--cutout-pixel-size)),
+    calc(100% - var(--cutout-pixel-size)) calc(100% - var(--cutout-pixel-size)),
+    calc(100% - var(--cutout-pixel-size)) 100%,
+    var(--cutout-pixel-size) 100%,
+    var(--cutout-pixel-size) calc(100% - var(--cutout-pixel-size)),
+    0px calc(100% - var(--cutout-pixel-size))
+  );
 }
