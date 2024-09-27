@@ -1,0 +1,18 @@
+/* Minecraft Fonts */
+
+@font-face {
+  font-family: minecraft-bold;
+  src: url(/fonts/minecraft-font/MinecraftBold-nMK1.otf);
+}
+@font-face {
+  font-family: minecraft-bold-italic;
+  src: url(/fonts/minecraft-font/MinecraftBoldItalic-1y1e.otf);
+}
+@font-face {
+  font-family: minecraft-italic;
+  src: url(/fonts/minecraft-font/MinecraftItalic-R8Mo.otf);
+}
+@font-face {
+  font-family: minecraft-regular;
+  src: url(/fonts/minecraft-font/MinecraftRegular-Bmg3.otf);
+}

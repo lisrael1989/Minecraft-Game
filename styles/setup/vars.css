@@ -1,0 +1,10 @@
+/* Color Variables */
+:root {
+  --primary-color: rgb(17, 17, 17);
+  --header-main-color: #131921;
+  --orange: orange;
+  --white: #ffffff;
+  --link-green: #007185;
+  --orange-description: #df7921;
+  --border-bottom: #bbbfbf;
+}

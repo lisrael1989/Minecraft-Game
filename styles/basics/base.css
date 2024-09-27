@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+html {
+  font-family: minecraft-regular, sans-serif;
+  /* font-family: minecraft-bold, sans-serif;
+  font-family: minecraft-bold-italic, sans-serif;
+  font-family: minecraft-italic, sans-serif; */
+}
+
+img {
+  width: 100%;
+}

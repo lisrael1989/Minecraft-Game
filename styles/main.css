@@ -1,9 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* SETUP */
+@import url(setup/vars.css);
+@import url(setup/typography.css);
 
-body {
-  background-color: #000;
-}
+/* BASICS */
+@import url(basics/base.css);
+/* @import url(basics/layout.css); */
+@import url(basics/helpers.css);
+
+/* COMPONENTS */
+/* @import url(components/main-header.css);
+
+
+/*Media queries*/
+/* @import url(setup/mq.css); */
