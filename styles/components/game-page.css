@@ -66,12 +66,15 @@ body {
   width: 60px;
   height: 60px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #8fcce7d7;
+  background-color: #fefcfcf9;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
 }
 
+.sky {
+  background-color: #8fcce7d7;
+}
 .grass {
   background-image: url('/assets/grass1.png');
 }
@@ -86,6 +89,7 @@ body {
 }
 
 .leaves {
+  background-color: #8fcce7d7;
   background-image: url('/assets/leaves.png');
 }
 

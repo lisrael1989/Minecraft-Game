@@ -55,6 +55,17 @@ function createTile(tileType) {
       tile.classList.add('sky');
       break;
   }
-
+  removeTile(tile, tileType);
   return tile;
+}
+
+function removeTile(tile) {
+  tile.addEventListener('click', (ev) => {
+    console.log(tile);
+    const tileType = Array.from(tile.classList).find((cls) => cls !== 'tile');
+    if (tileType) {
+      tile.classList.remove(tileType);
+      tile.style.backgroundColor = ``;
+    }
+  });
 }
