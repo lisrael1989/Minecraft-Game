@@ -4,6 +4,17 @@
   box-sizing: border-box;
   cursor: url('/assets/cursor.cur') 16 16, auto;
 }
+body {
+  background-color: var(--primary-color2);
+  margin: 150px auto;
+  text-align: center;
+  background-image: url('/assets/minecraft-landscape.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: minecraft-regular, sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+}
 
 /*BACK BUTTON*/
 #back-btn {
@@ -40,4 +51,44 @@
   &:focus {
     outline: none;
   }
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(20, 60px);
+  grid-template-rows: repeat(11, 60px);
+  gap: 1px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #8fcce7d7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.grass {
+  background-image: url('/assets/grass1.png');
+}
+
+.soil {
+  background-image: url('/assets/soil1.png');
+}
+
+.wood {
+  background-image: url('/assets/wood.png');
+  z-index: 1000000000;
+}
+
+.leaves {
+  background-image: url('/assets/leaves.png');
+}
+
+.stone {
+  background-image: url('/assets/Stone.jpg');
 }
