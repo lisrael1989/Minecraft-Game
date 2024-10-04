@@ -6,21 +6,20 @@
 }
 body {
   background-color: var(--primary-color2);
-  margin: 150px auto;
+  margin: 90px auto;
   text-align: center;
   background-image: url('/assets/minecraft-landscape.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   font-family: minecraft-regular, sans-serif;
-  font-size: 1.5rem;
+
   color: #fff;
 }
 
 /*BACK BUTTON*/
-#back-btn {
+
+.defult-btn {
   position: absolute;
-  top: 10px;
-  left: 10px;
   text-decoration: none;
   font-family: 'minecraft-bold', sans-serif;
   text-transform: uppercase;
@@ -51,6 +50,18 @@ body {
   &:focus {
     outline: none;
   }
+}
+
+#back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#restart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 #game-container {
@@ -95,4 +106,39 @@ body {
 
 .stone {
   background-image: url('/assets/Stone.jpg');
+}
+
+/*Tools section*/
+
+#tools-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#tools-container button {
+  font-family: 'minecraft-regular', sans-serif;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+}
+
+#tools-container button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: #3eee58aa;
+}
+
+#axe-btn {
+  background-image: url('/assets/axe.png');
+}
+
+#pickaxe-btn {
+  background-image: url('/assets/pickaxe.png');
+}
+
+#shovel-btn {
+  background-image: url('/assets/shovel.png');
 }
