@@ -1,15 +1,13 @@
 /* Color Variables */
 :root {
   --primary-color: rgb(17, 17, 17);
-  --primary-color2: #f3f3f3;
+  --primary-color2: #ffffff;
 
-  --header-main-color: #131921;
-  --orange: orange;
-  --white: #ffffff;
-  --link-green: #007185;
-  --orange-description: #df7921;
-  --border-bottom: #bbbfbf;
+  --green-border-color: #3eee58aa;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --sky-color: #8fcce7d7;
 
+  --btn-background-color: #008943;
   --effect-border-size: 5px;
   --cutout-pixel-size: 5px;
   --outline-border-size: 3px;
