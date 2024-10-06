@@ -28,13 +28,13 @@ function initGame() {
 
 function createGameBoard() {
   return [
-    ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'sky', 'sky', 'leaves', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'sky', 'sky', 'sky', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'leaves', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
-    ['sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky'],
+    ['sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'leaves', 'leaves', 'sky', 'sky'],
+    ['sky', 'sky', 'sky', 'leaves', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky'],
+    ['sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves'],
+    ['sky', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'sky', 'sky', 'sky', 'leaves', 'sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky'],
+    ['sky', 'sky', 'leaves', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'leaves', 'leaves', 'sky', 'leaves', 'leaves', 'leaves', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky'],
+    ['sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky'],
+    ['sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'sky', 'sky', 'sky', 'wood', 'wood', 'sky', 'sky'],
     ['grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass', 'grass'],
     ['soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil'],
     ['soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil', 'soil'],
