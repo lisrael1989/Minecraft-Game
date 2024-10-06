@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', initGame);
 
+let selectedItem;
+
 const axe = document.getElementById('axe-btn').addEventListener('click', () => {
   selectedItem = 'axe';
   setActiveTool('axe-btn', 'axe');
@@ -17,8 +19,6 @@ const shovel = document.getElementById('shovel-btn').addEventListener('click', (
   setActiveTool('shovel-btn', 'shovel');
   console.log('🚀 ~ selectedItem:', selectedItem);
 });
-
-let selectedItem;
 
 function initGame() {
   const grid = document.getElementById('game-container');
@@ -75,21 +75,38 @@ function createTile(tileType) {
       tile.classList.add('sky');
       break;
   }
-  removeTile(tile);
+  removeTile(tile, tileType);
   return tile;
 }
 
-function removeTile(tile) {
-  tile.addEventListener('click', (ev) => {
-    const tileType = Array.from(tile.classList).find((cls) => cls !== 'tile');
+function removeTile(tile, tileType) {
+  if (!tileType) {
+    console.log('empty tile');
+    return;
+  }
+
+  tile.addEventListener('click', () => {
+    if (!tileType || !tile.classList.contains(tileType)) {
+      alert('empty tile');
+      return;
+    }
+
     if (!selectedItem) {
-      tile.classList.remove('sky');
-    } else if (tileType && selectedItem === 'axe') {
-      tile.classList.remove('wood') || tile.classList.remove('leaves');
-    } else if (tileType && selectedItem === 'pickaxe') {
-      tile.classList.remove('stone');
-    } else if (tileType && selectedItem === 'shovel') {
-      tile.classList.remove('soil') || tile.classList.remove('grass');
+      if (tileType === 'sky') {
+        tile.classList.remove('sky');
+        inventoryCount('sky');
+      }
+      return;
+    }
+    const validRemoval =
+      (selectedItem === 'axe' && (tileType === 'wood' || tileType === 'leaves')) ||
+      (selectedItem === 'pickaxe' && tileType === 'stone') ||
+      (selectedItem === 'shovel' && (tileType === 'soil' || tileType === 'grass'));
+
+    if (validRemoval) {
+      tile.classList.remove(tileType);
+      inventoryCount(tileType);
+      tileType = '';
     }
   });
 }
@@ -107,5 +124,20 @@ function setActiveTool(btnId, tool) {
     button.classList.add('active');
     selectedItem = tool;
     console.log('add selected tool');
+  }
+}
+
+function inventoryCount(tileType) {
+  if (tileType === '') {
+    console.log('Cannot count an empty tile.');
+    return;
+  }
+  const inventoryTile = document.getElementById(`${tileType}-count`);
+
+  if (inventoryTile) {
+    const currentCount = parseInt(inventoryTile.textContent);
+    inventoryTile.textContent = currentCount + 1;
+  } else {
+    currentCount = 1;
   }
 }
