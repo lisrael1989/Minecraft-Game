@@ -1,5 +1,25 @@
 document.addEventListener('DOMContentLoaded', initGame);
 
+const axe = document.getElementById('axe-btn').addEventListener('click', () => {
+  selectedItem = 'axe';
+  setActiveTool('axe-btn', 'axe');
+  console.log('🚀 ~ selectedItem:', selectedItem);
+});
+
+const pickaxe = document.getElementById('pickaxe-btn').addEventListener('click', () => {
+  selectedItem = 'pickaxe';
+  setActiveTool('pickaxe-btn', 'pickaxe');
+  console.log('🚀 ~ selectedItem:', selectedItem);
+});
+
+const shovel = document.getElementById('shovel-btn').addEventListener('click', () => {
+  selectedItem = 'shovel';
+  setActiveTool('shovel-btn', 'shovel');
+  console.log('🚀 ~ selectedItem:', selectedItem);
+});
+
+let selectedItem;
+
 function initGame() {
   const grid = document.getElementById('game-container');
   const layout = createGameBoard();
@@ -55,6 +75,37 @@ function createTile(tileType) {
       tile.classList.add('sky');
       break;
   }
-
+  removeTile(tile);
   return tile;
+}
+
+function removeTile(tile) {
+  tile.addEventListener('click', (ev) => {
+    const tileType = Array.from(tile.classList).find((cls) => cls !== 'tile');
+    if (!selectedItem) {
+      tile.classList.remove('sky');
+    } else if (tileType && selectedItem === 'axe') {
+      tile.classList.remove('wood') || tile.classList.remove('leaves');
+    } else if (tileType && selectedItem === 'pickaxe') {
+      tile.classList.remove('stone');
+    } else if (tileType && selectedItem === 'shovel') {
+      tile.classList.remove('soil') || tile.classList.remove('grass');
+    }
+  });
+}
+
+function setActiveTool(btnId, tool) {
+  const button = document.getElementById(btnId);
+
+  if (button.classList.contains('active')) {
+    button.classList.remove('active');
+    selectedItem = '';
+    console.log('remove selected tool');
+  } else {
+    const buttons = document.querySelectorAll('.tool-btn');
+    buttons.forEach((btn) => btn.classList.remove('active'));
+    button.classList.add('active');
+    selectedItem = tool;
+    console.log('add selected tool');
+  }
 }
