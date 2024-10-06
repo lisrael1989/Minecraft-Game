@@ -87,7 +87,7 @@ function removeTile(tile, tileType) {
 
   tile.addEventListener('click', () => {
     if (!tileType || !tile.classList.contains(tileType)) {
-      alert('empty tile');
+      alert('It is empty tile, you can remove it');
       return;
     }
 
