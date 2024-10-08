@@ -76,23 +76,6 @@ body {
   /* left: 0; */
 }
 
-/* Responsive grid tile size - Adjust for smaller screens */
-
-@media (max-width: 768px) {
-  #game-container {
-    grid-template-columns: repeat(20, 30px);
-    grid-template-rows: repeat(11, 30px);
-    left: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  #game-container {
-    grid-template-columns: repeat(20, 20px);
-    grid-template-rows: repeat(11, 20px);
-  }
-}
-
 .tile {
   width: 60px;
   height: 60px;
@@ -102,22 +85,6 @@ body {
   background-repeat: no-repeat;
   border-radius: 5px;
 }
-
-/* Responsive tile size - adjust to match the game container */
-@media (max-width: 768px) {
-  .tile {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tile {
-    width: 20px;
-    height: 20px;
-  }
-}
-
 .sky {
   background-image: url('/assets/sky.png');
 }
@@ -199,43 +166,58 @@ body {
   margin-top: 20px;
 }
 
+/* Responsive max width 768px */
+
 @media (max-width: 768px) {
+  #game-container {
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(11, 30px);
+    left: 20px;
+  }
+  .tile {
+    width: 30px;
+    height: 30px;
+  }
   #inventory {
     gap: 5px;
     padding: 10px;
   }
+
+  .inventory-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .inventory-item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
 }
 
+/*Responsive max width 480px*/
+
 @media (max-width: 480px) {
+  #game-container {
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(11, 20px);
+  }
+  .tile {
+    width: 20px;
+    height: 20px;
+  }
   #inventory {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 2px;
-    bottom: -250px;
-    left: 50px;
+    bottom: -50px;
+    left: -10;
   }
-}
-
-.inventory-item {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.inventory-item img {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-  .inventory-item img {
-    width: 30px;
-    height: 30px;
+  #tools-container {
+    margin-top: 100px;
   }
-}
 
-@media (max-width: 480px) {
   .inventory-item img {
     width: 30px;
     height: 30px;
