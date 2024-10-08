@@ -1,3 +1,5 @@
+import { showModal } from './utils.js';
+
 document.addEventListener('DOMContentLoaded', initGame);
 
 let selectedItem;
@@ -87,7 +89,9 @@ function removeTile(tile, tileType) {
 
   tile.addEventListener('click', () => {
     if (!tileType || !tile.classList.contains(tileType)) {
-      alert('It is empty tile, you can remove it');
+      // alert('It is empty tile, you can remove it');
+
+      showModal('It is an empty tile, you cannot remove it!');
       return;
     }
 
@@ -107,6 +111,8 @@ function removeTile(tile, tileType) {
       tile.classList.remove(tileType);
       inventoryCount(tileType);
       tileType = '';
+    } else {
+      showModal('Wrong move! You cannot remove this tile with the current tool.');
     }
   });
 }

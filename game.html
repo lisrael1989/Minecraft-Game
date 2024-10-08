@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/components/game-page.css" />
     <link rel="stylesheet" href="/styles/setup/typography.css" />
     <link rel="stylesheet" href="/styles/setup/vars.css" />
+    <link rel="stylesheet" href="/styles/components/show-modal.css" />
 
     <script src="/services/game.js" type="module" defer></script>
     <title>Game html</title>
@@ -27,6 +28,14 @@
       <div class="inventory-item"><img src="assets/wood.png" alt="Wood" /><span id="wood-count">0</span></div>
       <div class="inventory-item"><img src="assets/leaves.png" alt="Leaves" /><span id="leaves-count">0</span></div>
       <div class="inventory-item"><img src="assets/Stone.jpg" alt="Stone" /><span id="stone-count">0</span></div>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="modal" id="modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <h3>❗Wrong move ❗</h3>
+        <p>It is empty tile, you can remove it</p>
+      </div>
     </div>
   </body>
 </html>

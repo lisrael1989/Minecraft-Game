@@ -46,3 +46,16 @@ export function playSound() {
     sound.play();
   }
 }
+
+export function showModal(msg) {
+  const modal = document.getElementById('modal');
+  const overlay = document.getElementById('overlay');
+  modal.querySelector('p').textContent = msg;
+  overlay.style.display = 'block';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 5000);
+}
+document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('overlay').style.display = 'none';
+});
