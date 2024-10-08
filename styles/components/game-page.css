@@ -188,14 +188,12 @@ body {
 #inventory {
   position: relative;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   gap: 10px;
   background-color: rgba(0, 0, 0, 0.548);
   width: fit-content;
-  /* right: -85%; */
   padding: 15px;
   border-radius: 8px;
   margin-top: 20px;
